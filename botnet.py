@@ -1,8 +1,9 @@
 from pexpect import pxssh
 
+
 class Bot:
 
-    #initializing a new client bot
+    # initializing a new client bot
     def __init__(self, host, user, password):
         self.host = host  # IP of bot host
         self.user = user
@@ -38,4 +39,6 @@ def command_bot(cmd):
 botnet = []
 
 
-
+def add_bot(host, user, password):
+    new_bot = Bot(host, user, password)
+    botnet.append(new_bot)
